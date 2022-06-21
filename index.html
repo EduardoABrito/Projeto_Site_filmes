@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="vendor/jquery/jquery-ui.min.css">
+	<link rel="stylesheet" href="vendor/fontawesome/all.min.css">
+    <link rel="stylesheet" href="vendor/sweetalert/sweetalert2.min.css">
+    <link rel="stylesheet" href="vendor/custom/index.css">
+    <link rel="icon" type="image/png" href="/vendor/media/icon.png" />
+    <title>[DIW-PUCMG] - DUDUFLIX</title>
+
+</head>
+<body>
+<nav class="navbar px-5 pb-2">
+    <div class="navbar-brand"><img src="/vendor/media/logo.png" class="img-fluid"></div>
+    <ul id="navbar-titles">
+        <li><a href="#lançamentos">Lançamentos</a></li>
+        <li><a href="#destaques">Em destaque</a></li>
+        <li><a href="#avaliacoes">Avaliações</a></li>
+        <li><a href="#entrevistas">Entrevistas & makingof</a></li>
+        <li><a href="#novidades">Novidades</a></li>
+        <li><a href="pesquisa.html">Pesquisa</a></li>
+    </ul>
+    <div>
+        <div class="input-group shadow-1">
+            <span class="input-group-text"><i class="fas fa-search"></i></span>
+            <input type="search" class="form-control" placeholder="Pesquisar filme" id="pesquisa">
+        </div>
+    </div>
+</nav>
+
+<section id="lancamentos">
+    <div class="container-fluid px-4">
+        <h2 class="text-center" id="lancamentos">Lançamentos</h2>
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+             <div id="carrouselFilmes">
+
+             </div>
+              <div class="carousel-indicators my-3">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="9" aria-label="Slide 3"></button>
+              </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Proximo</span>
+            </button>
+          </div>       
+    </div>
+</section>
+
+<section id="destaques">
+    <div class="container p-4">
+        <div class="d-flex justify-content-between">
+            <h2 id="destaques">Filmes</h2>
+            <!-- <div class="w-25 d-flex">
+                <label for="categorias" class="align-self-center me-2">Categorias:</label>
+                <select name="categorias" id="categorias" class="form-select">
+                    <option>Aventura</option>
+                    <option>Romance</option>
+                    <option>Comédia</option>
+                </select>
+            </div> -->
+        </div>
+        <div class="row my-3" id="cardFilmes">
+
+          
+        </div>
+        <div class="d-flex justify-content-end">
+            <button class="btn btn-primary" onclick="api.funcoes.loadMore()"><i class="fa fa-plus"></i> Carregar mais filmes</button>
+        </div>
+        <h2 id="avaliacoes ">Últimas Avaliações</h2>
+        <div class="row my-4">
+            <div class="col-md-4 card px-3">
+                <div class="card-avaliacao">
+                    <div class="card-header align-self-end d-flex align-items-center  border-0"><img src="/vendor/media/semfoto.png" class="img-fluid semfoto"/><h5 class="m-2"> Eduardo Brito</h5></div>
+                    <div class="card-body">Muito Bom esse site</div>
+                    <div class="d-flex m-2 justify-content-end align-items-center">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <span>10/04/2022</span>
+                    </div>
+                </div>
+            </div> 
+            <div class="col-md-4 card  px-3">
+                <div class="card-avaliacao">
+                    <div class="card-header align-self-end d-flex align-items-center  border-0"><img src="/vendor/media/semfoto.png" class="img-fluid semfoto"/><h5 class="m-2"> Lucas Gabriel</h5></div>
+                    <div class="card-body">Muito Bom esse site</div>
+                    <div class="d-flex m-2 justify-content-end align-items-center">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <span>10/04/2022</span>
+                    </div>
+                </div>
+            </div> 
+            <div class="col-md-4 card px-3">
+                <div class="card-avaliacao">
+                    <div class="card-header align-self-end d-flex align-items-center  border-0"><img src="/vendor/media/semfoto.png" class="img-fluid semfoto"/><h5 class="m-2"> João Luis</h5></div>
+                    <div class="card-body">Muito Bom esse site</div>
+                    <div class="d-flex m-2 justify-content-end align-items-center">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <span>10/04/2022</span>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <div class="d-flex justify-content-end">
+            <button class="btn btn-primary"><i class="fa fa-plus"></i> Carregar mais avaliações</button>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container p-4">
+        <h2 id="entrevistas">Entrevistas & Making Of</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <iframe width="360" height="215" src="https://www.youtube.com/embed/VWFGAVGxRlg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div>
+                    <b>Filme: Homen aranha de volta ao lar</b>
+                </div>
+                <div class="row">
+                    <div class="col-md-8"><b>Diretor: </b><span>Jon Watts</span></div>
+                    <div class="col-md-6"><b>Roteiro: </b><span>Steve Ditko, Jonathan Goldstein (XII)</span></div>
+                    <div class="col-md-6"><b>Estreia: </b><span>2017</span></div>
+                </div>
+            </div>      
+            <div class="col-md-4">
+                <iframe width="360" height="215" src="https://www.youtube.com/embed/czCErkgABSw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div>
+                    <b>AQUAMAN</b>
+                </div>
+                <div class="row">
+                    <div class="col-md-8"><b>Diretor: </b><span>James Wan</span></div>
+                    <div class="col-md-6"><b>Roteiro: </b><span>James Wan, Geoff Johns</span></div>
+                    <div class="col-md-6"><b>Estreia: </b><span>2018</span></div>
+                </div>
+            </div>       
+            <div class="col-md-4">
+                <iframe width="360" height="215" src="https://www.youtube.com/embed/K6Zg5-fNiBQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div>
+                    <b>Os incriveis 2</b>
+                </div>
+                <div class="row">
+                    <div class="col-md-8"><b>Diretor: </b><span>Brad Bird</span></div>
+                    <div class="col-md-6"><b>Roteiro: </b><span>Brad Bird</span></div>
+                    <div class="col-md-6"><b>Estreia: </b><span>2018</span></div>
+                </div>
+            </div>             
+        </div>
+    </div>
+</section>
+
+<!-- <section>
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-md-8">
+                <h2 id="novidades">Novidades</h2>
+                <div class="row" id="listaNovidades">
+                    <div class="d-md-flex">
+                        <div class="col-12 col-md-4">
+                            <iframe width="360" height="215" src="https://www.youtube.com/embed/z2Zk3izCaLk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                            
+                        </div>
+                        <div class="col-md-2"></div>
+                        <div class="col-12 col-md-6 justify-content-end">
+                            <h3>Deadpool 3</h3>
+                            <p>Deadpool 3 é um dos filmes mais aguardados do futuro do MCU, afinal, a tão esperada chegada do anti-herói ao universo cinematográfico canônico da Marvel vai finalmente acontecer após a compra da Fox pela Disney</p>
+                        </div>
+                    </div>
+                    <div class="d-md-flex">
+                        <div class="col-12 col-md-4">
+                            <iframe width="360" height="215" src="https://www.youtube.com/embed/al58nMA13OM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                            
+                        </div>
+                        <div class="col-md-2"></div>
+                        <div class="col-12 col-md-6 justify-content-end">
+                            <h3>Guardiões da Galáxia 3</h3>
+                            <p>Guardians of the Galaxy Vol. 3 é um futuro filme de super-herói estadunidense baseado na equipe ficcional de mesmo nome da Marvel Comics.</p>
+                        </div>
+                    </div>
+                    <div class="d-md-flex">
+                        <div class="col-12 col-md-4">
+                            <iframe width="360" height="215" src="https://www.youtube.com/embed/n0JFEZmawpM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                            
+                        </div>
+                        <div class=" col-md-2"></div>
+                        <div class="col-12 col-md-6 justify-content-end">
+                            <h3>Capitã Marvel: The Marvels</h3>
+                            <p>The Marvels é um futuro filme estadunidense de super-herói baseado nas personagens Carol Danvers, Monica Rambeau e Kamala Khan da Marvel Comics. Produzido pela Marvel Studios e distribuído pela Walt Disney Studios Motion Pictures, será a sequência de Capitã Marvel, uma continuação da série Ms.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <h2>Sobre</h2>
+                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+                    The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+                <h2>Editorial</h2>
+                <p><i class="fas fa-user"></i> <b>Redação:</b> <span>Eduardo</span></p>
+                <p><i class="fas fa-user"></i> <b>Pesquisa:</b> <span>Eduardo</span></p>
+                <p><i class="fas fa-user"></i> <b>Gerente Geral:</b> <span>Eduardo</span></p>
+            </div>
+        </div>
+    </div>
+</section> -->
+<footer class="bg-dark text-center text-lg-start">
+    <div class="text-center text-light p-3">
+        © 2022 Copyright:
+        <a class="text-light" href="#">Eduardo Brito</a>
+    </div>
+</footer>
+<template id="templateCarrousel">
+    <div class="carousel-item">
+        <div class="row my-3">
+            <div class="col-md-6">
+                <div class="d-flex justify-content-end">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/a7t-avKlpkc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h3 class="text-center filmeNome">DEADPOOL 2</h3>
+                <p>
+                    <b>Sinopse:</b>
+                    <span class="filmeDesc">
+
+                        O supersoldado Cable vem do futuro com a missão de assassinar o jovem mutante Russel e o mercenário Deadpool precisa aprender o que é ser herói de verdade para salvá-lo. Para isso, ele recruta seu velho amigo Colossus e forma o novo grupo X-Force, sempre com o apoio do fiel escudeiro Dopinder.
+                    </span>
+                    <div class="justify-content-md-between">
+                        <div><b>Produção: </b><span class="filmeProducao">David Leitch</span></div>
+                        <div><b>Estreia: </b><span class="filmeEstreia">1 de julho de 2018</span></div>
+                        <div><b>popularidade: </b><span class="filmePopularidade">David Leitch</span></div>
+                    </div>            
+                </p>
+            </div>
+        </div>
+      </div>
+</template>
+
+<template id="templateFilmes">
+<div class="col-md-3 text-center">
+    <h5 class="filmeNome"></h5>
+    <div class="border-1 img-destaques"><img src="" class="img-fluid rounded" alt=""></div>
+</div>
+</template>
+
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/jquery/jquery-ui.min.js"></script>
+<script src="vendor/jquery/jquery.mask.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="vendor/sweetalert/sweetalert2.all.min.js"></script>
+<script src="scripts/api.js"></script>
+</body>
+</html>

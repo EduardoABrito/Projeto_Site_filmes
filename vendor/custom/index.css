@@ -1,0 +1,61 @@
+body ,nav{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgb(255, 8, 0) 100%);
+    color:white; 
+}
+
+section:nth-child(even){
+    background-color: rgba(0, 0, 0, 0.582);
+}
+
+nav.navbar > ul#navbar-titles{
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+nav.navbar > ul#navbar-titles > li{
+    list-style-type: none;
+}
+.navbar-brand > img{
+    width: 35%;
+}
+nav.navbar > ul#navbar-titles > li:not(:last-child):after{
+    content: '|';
+    padding: 12px;
+}
+
+nav.navbar > ul#navbar-titles > li > a{
+    text-decoration: none;
+    color: inherit;
+}
+nav.navbar > ul#navbar-titles > li > a:hover{
+    color: blue;
+}
+
+#listaNovidades > div:not(:last-child){
+    border-bottom: 1px solid #ddd;
+}
+#lancamentos{
+    color: white;
+    background-image: url('/vendor/media/fundomarvel.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img-destaques
+{
+    border: rgba(255, 255, 255, 0.473) 2px outset;
+    box-shadow: 0 0 1em rgb(124, 53, 255);
+
+}
+.card{
+    background-color: transparent;
+}
+.card-avaliacao{
+    background-color: rgba(104, 103, 103, 0.144);
+    box-shadow: 0 0 1em rgb(124, 53, 255);
+
+}
+.semfoto{
+    width: 15%;
+}

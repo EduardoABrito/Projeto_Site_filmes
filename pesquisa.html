@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="vendor/jquery/jquery-ui.min.css">
+	<link rel="stylesheet" href="vendor/fontawesome/all.min.css">
+    <link rel="stylesheet" href="vendor/sweetalert/sweetalert2.min.css">
+    <link rel="stylesheet" href="vendor/custom/index.css">
+    <link rel="icon" type="image/png" href="/vendor/media/icon.png" />
+    <title>[DIW-PUCMG] - DUDUFLIX</title>
+
+</head>
+<body>
+<nav class="navbar px-5 pb-2">
+    <div class="navbar-brand"><img src="/vendor/media/logo.png" class="img-fluid"></div>
+    <ul id="navbar-titles">
+        <li><a href="index.html">Lançamentos</a></li>
+        <li><a href="index.html">Em destaque</a></li>
+        <li><a href="index.html">Avaliações</a></li>
+        <li><a href="index.html">Entrevistas & makingof</a></li>
+        <li><a href="index.html">Novidades</a></li>
+        <li><a href="pesquisa.html">Pesquisar</a></li>
+    </ul>
+    
+</nav>
+
+
+<section id="destaques">
+    <div class="container p-4 text-center">
+        <div class="my-5">
+            <h2 id="destaques text-center">Pesquisar</h2>
+            <div class="w-100">
+                <div class="input-group shadow-1">
+                    <span class="input-group-text"><i class="fas fa-search"></i></span>
+                    <input type="search" class="form-control" placeholder="Pesquisar filme" id="pesquisa">
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row my-3" id="cardFilmes">
+
+          
+        </div>       
+    </div>
+</section>
+
+
+
+<footer class="bg-dark text-center text-lg-start">
+    <div class="text-center text-light p-3">
+        © 2022 Copyright:
+        <a class="text-light" href="#">Eduardo Brito</a>
+    </div>
+</footer>
+<template id="templateFilmes">
+<div class="col-md-3 text-center">
+    <h5 class="filmeNome"></h5>
+    <div class="border-1 img-destaques"><img src="" class="img-fluid rounded" alt=""></div>
+</div>
+</template>
+
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/jquery/jquery-ui.min.js"></script>
+<script src="vendor/jquery/jquery.mask.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="vendor/sweetalert/sweetalert2.all.min.js"></script>
+<script src="scripts/api.js"></script>
+</body>
+</html>
