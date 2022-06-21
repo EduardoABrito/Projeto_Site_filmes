@@ -35,7 +35,6 @@ var api={
             $.get({
                 url:`${api.variaveis.baseUrl}/discover/movie?sort_by=popularity.desc&${api.variaveis.baseLanguage}&${api.variaveis.apiKey}&page=${page}`,
                 success:({results})=>{
-                    console.log(results)
                    api.funcoes.loadMovies(results)
                 }
             }).then(()=>{
@@ -62,6 +61,7 @@ var api={
         },
         searchMovies:()=>{
             $("#pesquisa").on("keyup",function(){
+               if(this.value != ""){
                 $.get({
                     url:`${api.variaveis.baseUrl}/search/movie?${api.variaveis.baseLanguage}&${api.variaveis.apiKey}&page=${api.variaveis.pages}&query=${this.value}`,
                     success:({results})=>{
@@ -69,6 +69,9 @@ var api={
                         api.funcoes.loadMovies(results)
                     }
                 })
+                return
+               }
+               api.funcoes.listMovies()
             })
         },
         init:()=>{
