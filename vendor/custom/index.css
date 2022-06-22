@@ -42,7 +42,7 @@ nav.navbar > ul#navbar-titles > li > a:hover{
     background-repeat: no-repeat;
 }
 
-.img-destaques
+.img-destaques 
 {
     border: rgba(255, 255, 255, 0.473) 2px outset;
     box-shadow: 0 0 1em rgb(124, 53, 255);
@@ -58,4 +58,13 @@ nav.navbar > ul#navbar-titles > li > a:hover{
 }
 .semfoto{
     width: 15%;
+}
+.modal-content{
+    background: rgb(23,41,135);
+    background: linear-gradient(90deg, rgba(23,41,135,1) 0%, rgba(145,25,25,1) 100%);
+    border: solid white 1px;
+}
+
+.divFilmeNome{
+    height: 10%;
 }

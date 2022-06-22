@@ -8,8 +8,20 @@ var api={
         id:[],
     },
     funcoes:{
-        detailMoveie:()=>{
-
+        detailMovie:(id)=>{
+            $.get({
+                url:`${api.variaveis.baseUrl}/movie/${id}?append_to_response=videos&${api.variaveis.apiKey}`,
+                success:(result)=>{
+                    console.log(result)
+                    $("#modalDetais").modal("show") 
+                    $(".modalImg").attr("src",`${api.variaveis.baseUrlImg}${result.poster_path}`)                   
+                    $(".modalNome").html(result.title)
+                    $(".modalDesc").html(result.overview)
+                    $(".modalPopularidade").html(result.popularity)
+                    $(".modalEstreia").html(result.release_date)
+                    $(".modalProducao").html(result?.production_countries[0].name)
+                }
+            })
         },
         releasesMovies:()=>{
             $("#carrouselFilmes").html("")
@@ -54,6 +66,7 @@ var api={
             results.forEach(v => {
                 api.variaveis.id.push(v.id)
                 let template = $($("#templateFilmes").html())
+                template.find(".filmeLink").attr("href",`javascript: api.funcoes.detailMovie(${v.id});`)
                 template.find(".filmeNome").html(v.original_title)
                 template.find(".img-destaques > img").attr("src",`${api.variaveis.baseUrlImg}${v.poster_path}`)
                 $("#cardFilmes").append(template)
@@ -77,6 +90,9 @@ var api={
         init:()=>{
             api.funcoes.listMovies()
             api.funcoes.searchMovies()
+            $(".fecharModal").click(()=>{
+                $("#modalDetais").modal("toggle") 
+            })
         }        
     }
 }
